@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !/Application/Style
+RewriteRule ^ index.php [L]
+
+#Premission denied for directory
+Options -indexes
+
+
+
+
