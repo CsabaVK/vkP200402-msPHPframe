@@ -9,6 +9,37 @@ function homeController($datas)
     ]);
 }
 
+// ---------------------------------
+
+function testesController($matches)
+{
+    $id = $matches['id'];
+
+    $config = getConfig(CONFPATH);
+    $pdo    = getConnection($config);
+
+    if (!$pdo) 
+    {
+        view([
+            "allBus"    => 'active',
+            "title"     => "- Hiba",
+            'view'      => '_error'
+        ]);
+    }
+
+    $testes = getTestes($pdo, $id)
+    var_dump($matches); die;
+    
+    view([
+        "title"         => "- Vizsgálatok",
+        'view'          => 'testes',
+        'testes'        => $testes,
+        'numOfTestes'   => count($testes)
+    ]);
+}
+
+// ----------------------------------------
+
 function allBusController($matches)
 {
     $config = getConfig(CONFPATH);
@@ -23,6 +54,7 @@ function allBusController($matches)
         ]);
     }
 
+
     view([
         "allBus"        => 'active',
         "title"         => "- Menetrendek",
@@ -30,8 +62,6 @@ function allBusController($matches)
         'buses'         => getallBuses($pdo)
     ]);
 }
-
-
 
 
 

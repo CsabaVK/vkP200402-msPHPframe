@@ -10,7 +10,7 @@
      * Pl.: winsql.vereb.dc/diakXX/feladat/index.php
      *    ekkor:              --> /feladat
      */
-    define('APPROOT', '/phpframeframe');       
+    define('APPROOT', '/phpframeframe');
 
     /**
      * Az adatbázis kacsolódásho szükséges adatokat tartalmazó json fájl.

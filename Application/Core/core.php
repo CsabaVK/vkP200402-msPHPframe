@@ -54,7 +54,8 @@
     addRoute('/about/?', 'aboutController');
 
     
-    addRoute('/allBus/?', 'allBusController');   
+    addRoute('/allBus/?', 'allBusController');
+    addRoute('/testes/(?<id>/d+)', 'testesController');
     
 
     /**

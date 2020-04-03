@@ -24,6 +24,37 @@ function getConnection($config)
 
 }
 
+
+
+
+
+function getTestes( PDO $pdo, $buszId )
+{
+  $smt = $pdo->prepare('SELECT * FROM szerviz WHERE buszId = :buszId');
+  $smt->bindParam(':buszId', $buszId);
+
+  try
+  {
+    if( !$smt->execute() )
+    {
+      throw new RuntimeException( $smt->errorInfo()[2] );
+    }
+
+    return $smt->fetchAll( PDO::FETCH_NUM );
+  }
+  catch (RuntimeException $e)
+  {
+    error_log("[".date('Y-m-d H:i:s')."]".$e->getMessage().PHP_EOL, 3, APPPATH.'Log/dberror.log');
+
+    return [];
+  }
+}
+
+
+
+
+
+
 function getAllBuses( PDO $pdo)
 {
   $smt = $pdo->prepare('SELECT * FROM busz');

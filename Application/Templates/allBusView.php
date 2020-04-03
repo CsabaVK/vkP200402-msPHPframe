@@ -14,10 +14,10 @@
       <td> <?= $bus[$i] ?> </td>
       <?php endfor ?>
         <td>
-          <a href="<?php= APPROOT ?>/testes/<?php= $bus[0] ?>" class="btn btn-grn">Lekér</a>
+          <a href="<?= APPROOT ?>/testes/<?= $bus[0] ?>" class="btn btn-grn">Lekér</a>
         </td>
         <td>
-          <a href="<?php= APPROOT ?>/modifyBusForm/<?php= $bus[0] ?>" class="btn btn-rng">Ugrás</a>
+          <a href="<?= APPROOT ?>/modifyBusForm/<?= $bus[0] ?>" class="btn btn-rng">Ugrás</a>
         </td>
   </tr>
   <?php endforeach ?>
