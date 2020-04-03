@@ -63,6 +63,21 @@ function allBusController($matches)
     ]);
 }
 
+
+
+function newBusFormController()
+{
+    view([
+        "title"     => "- Új buszjárat felvétele",
+        'view'      => 'newBusForm'
+    ]);
+}
+
+
+
+
+
+
 function modifyBusController($datas)
 {
     $bus = $_POST;
@@ -78,29 +93,45 @@ function modifyBusController($datas)
         ]);
     }
 
-    $result = modifyBus($pdo, $bus)
+    $result = modifyBus($pdo, $bus);
 
-    if (!$result) 
+    if (!$result)
     {
+        header('refresh: 2; url='.APPROOT.'/modifyBusForm');
+
         view([
             "title"     => "- Sikertelen módosítás",
             'view'      => 'unsuccessfullModify'
         ]);
 
-        header('refresh: 2; url=/modifyBusForm');
     }
     else
     {
+        header('refresh: 2; url='.APPROOT.'/allBus');
+
         view([
             "title"     => "- Sikertelen módosítás",
             'view'      => 'unsuccessfullModify'
         ]);
-        header('refresh: 2; url=/allBus')
     }
 
 
     header('refresh: 2; url='.APPROOT.'/allBusz');
 }
+
+/*
+HTTP Resonse
+
+    status row
+    header:value
+    header:value
+    header:value
+    header:value
+
+    content -> html
+*/
+
+
 
 
 function modifyBusFormController($datas)

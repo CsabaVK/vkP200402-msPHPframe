@@ -130,7 +130,7 @@ a {
 }
 
 
-/* Modify containter */
+/* Modify bus */
 .modify-bus-form{
     width           : 400px;
     margin          : 100px auto;
@@ -142,6 +142,16 @@ a {
 }
 .modify-bus-form input{
     width           : 300px;
+}
+.succ-mod-container{
+    width: 300px;
+    margin: 100px auto;
+    color: green;
+}
+.unsucc-mod-container{
+    width: 300px;
+    margin: 100px auto;
+    color: red;
 }
 
 

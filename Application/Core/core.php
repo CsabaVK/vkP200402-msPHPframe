@@ -61,6 +61,9 @@
     // E feladat
     addRoute('/modifyBusForm/(?<id>\d+)/?', 'modifyBusFormController');
     addRoute('/modifyBus/?', 'modifyBusController');
+    // F feladat
+    addRoute('/newBusForm/?', 'newBusFormController');
+    addRoute('/newBus/?', 'newBusController');
 
     /**
      * A routing függvény végzi a kikeresést és a controller függvény meghívását.

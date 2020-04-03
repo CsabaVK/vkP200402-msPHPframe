@@ -34,11 +34,11 @@ function modifyBus( PDO $pdo, $bus)
                       alacsony    = :alacsony
                       WHERE id    = :buszId');
 
-  $smt->bindParam(':indulas', $indulas);
-  $smt->bindParam(':cel', $cel);
-  $smt->bindParam(':menetido', $menetido);
-  $smt->bindParam(':alacsony', $alacsony);
-  $smt->bindParam(':id', $id);
+  $smt->bindParam(':indulas',     $indulas);
+  $smt->bindParam(':cel',         $cel);
+  $smt->bindParam(':menetido',    $menetido);
+  $smt->bindParam(':alacsony',    $alacsony);
+  $smt->bindParam(':id',          $id);
 
   try
   {
@@ -48,7 +48,7 @@ function modifyBus( PDO $pdo, $bus)
     }
 
     return true;
-    
+
   }
   catch (RuntimeException $e)
   {
