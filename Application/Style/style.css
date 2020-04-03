@@ -122,11 +122,26 @@ a {
     color           : white;
 }
 
-
+/* testes-------------- */
 .all-test-container {
     margin          : auto;
     width           : 800px;
     color           : blue;
+}
+
+
+/* Modify containter */
+.modify-bus-form{
+    width           : 400px;
+    margin          : 100px auto;
+    display         : table;
+    border          : 1px solid lightblue;
+}
+.modify-bus-form label{
+    display         : block;
+}
+.modify-bus-form input{
+    width           : 300px;
 }
 
 

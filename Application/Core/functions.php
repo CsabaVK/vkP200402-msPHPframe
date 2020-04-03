@@ -43,7 +43,7 @@ function routing($cleanedUri)
     {        
         if(preg_match($pattern, $cleanedUri, $matches))
         {            
-            $controller($matches, 'ez nem adodik at');
+            $controller($matches);
             return;
         }
     }
@@ -61,4 +61,5 @@ function view($datas)
 {
     extract($datas);
     require_once APPPATH.'Templates/_layout.php';
+    die;
 }
