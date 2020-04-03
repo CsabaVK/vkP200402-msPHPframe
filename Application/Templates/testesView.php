@@ -12,7 +12,7 @@
 
     <?php foreach($testes as $test): ?>
       <tr>
-        <?php for($i=0; $i<count($test); $i++): ?>
+        <?php for($i=1; $i<count($test); $i++): ?>
         <td> <?= $test[$i] ?> </td>
         <?php endfor ?>
       </tr>

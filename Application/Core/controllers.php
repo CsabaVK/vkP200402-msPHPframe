@@ -27,8 +27,8 @@ function testesController($matches)
         ]);
     }
 
-    $testes = getTestes($pdo, $id)
-    var_dump($matches); die;
+    $testes = getTestes($pdo, $id);
+    // var_dump($matches); die;
     
     view([
         "title"         => "- Vizsgálatok",

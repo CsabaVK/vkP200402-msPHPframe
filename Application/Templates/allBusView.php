@@ -10,7 +10,7 @@
   </tr>
       <?php foreach($buses as $bus): ?>
   <tr>
-      <?php for($i = 0;$i < count($bus); $i++): ?>
+      <?php for($i = 1; $i < count($bus); $i++): ?>
       <td> <?= $bus[$i] ?> </td>
       <?php endfor ?>
         <td>
